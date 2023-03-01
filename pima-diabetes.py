@@ -156,9 +156,9 @@ def ExtraTreeClassifierModel(x_train,x_test,y_train,y_test):
 if __name__ == "__main__":
     data= pd.read_csv("diabetes.csv")
     x_train,x_test,y_train,y_test = train_test_data(data)
-    d = {}
+    #d = {}
     features = [1,	85,	66,	29,	0, 26.6, 0.351,	31]
-    d['LogisticRegressionModel']= LogisticRegressionModel(x_train,x_test,y_train,y_test,features)
+    # d['LogisticRegressionModel']= LogisticRegressionModel(x_train,x_test,y_train,y_test,features)
     # d['KNeighboursClassifierModel']= KNeighboursClassifierModel(x_train,x_test,y_train,y_test)
     # d['SVCModel']= SVCModel(x_train,x_test,y_train,y_test)
     # d['NaiveBayesModel']= NaiveBayesModel(x_train,x_test,y_train,y_test)
@@ -168,7 +168,8 @@ if __name__ == "__main__":
     # d['GradientBoostingClassifierModel']= GradientBoostingClassifierModel(x_train,x_test,y_train,y_test)
     # d['XGBClassifierModel']= XGBClassifierModel(x_train,x_test,y_train,y_test)
     # d['ExtraTreeClassifierModel']= ExtraTreeClassifierModel(x_train,x_test,y_train,y_test)
-    print(d)
+    res=LogisticRegressionModel(x_train,x_test,y_train,y_test,features)
+    print(res)
 
     
 
